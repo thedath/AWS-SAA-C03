@@ -20,3 +20,6 @@ AWS Budget facilitate sending alerts when the usage hits the configured usage cr
 - AWS Resources [free tier](https://aws.amazon.com/free)
 - Enable all options in **Billing dashboard -> Billing preferences**
 - Create budgets in **Billing dashboard -> Budgets**
+
+### IAM
+- In order for IAM users to access billing info, root user must enable this feature under **Accounts -> IAM User and Role Access to Billing Information**
