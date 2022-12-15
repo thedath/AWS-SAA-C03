@@ -5,8 +5,18 @@
 - Same Credit Card can be used to create multiple AWS accounts.
 - Root user has full controll.
 
-### IAM
-- Used to create users for a AWS account.
-- By default IAM users does not have any access.
-- Uses IAM Roles with Groups when creating IAM users to grant necessary access
-- Cross account permissions???
+### MFA
+- Factors: Things you can use to prove your identity as evidences
+- 4 types of factors:
+	- Knowledge: Ex: Username & Passwords, Something I know by knowledge.
+	- Possession: Ex: ATM Card, Something I possess.
+	- Inherent: Ex: Fingerprint, Iris, Face, Voice, Something I am.
+	- Location: Ex: Network currently connected, Somewhere you are.
+- Activate MFA in **Security Credentials**
+
+
+### Billing & Budget plan
+AWS Budget facilitate sending alerts when the usage hits the configured usage criteria. Helps to keep on track of our resources' usages.
+- AWS Resources [free tier](https://aws.amazon.com/free)
+- Enable all options in **Billing dashboard -> Billing preferences**
+- Create budgets in **Billing dashboard -> Budgets**
