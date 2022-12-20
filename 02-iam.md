@@ -1,5 +1,6 @@
 
 
+
 # IAM (Identity & Access Management/Manager)
 Globally recilient (of a person or animal, able to withstand or recover quickly from difficult conditions.) service
 
@@ -17,6 +18,7 @@ Globally recilient (of a person or animal, able to withstand or recover quickly 
 - Support identity federation??? (Active directories, web identities like Facebook & Google)
 - Support MFA???
 
+
 ## Different types of identity objects in IAM
 
 |||
@@ -25,12 +27,26 @@ Globally recilient (of a person or animal, able to withstand or recover quickly 
 |Groups|Collection which represents set of IAM users or applications that can access AWS resources in an AWS account|
 |Roles|Other AWS resources/services that can access AWS resources in an AWS account. Roles are used to grant access to uncertain number of resources (internal or external) for AWS resorces in your AWS account. Ex: EC2 instances writing to a s3 bucket. |
 
+
 ## IAM Policies
 
 Basically rules which defines whether a certain user, user group or role can access a certain resource or not. IAM policy itself have no meaning untill its' being assigned to a user, user group or role.
+
 
 ## Duties of IAM
 
 1. Manage Identities (IDP, Identity provider)
 2. Authenticate IAM Users & Roles
 3. Authorise IAM Users & Roles
+
+
+## IAM Credentials
+
+1. Two types
+	- Username & Password 
+	- Access keys (Two parts)
+	    - Access Key Id (Public, like username)
+	    - Access Key Secret (To secure, like a password)
+2. Long term, no expiration, no rotation
+3. Access keys can be created, deleted, activated & inactivated
+4. Maximum 2 access keys allowed for a IAM user (either active or inactive)
