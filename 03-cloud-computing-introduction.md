@@ -24,7 +24,72 @@
 4. **Measured Service:** Usage of the consumers' resources should be able to monitred, controlled, reported & billed. (Pay for what you consume)
 
 ### Types of Clouds
-- Public Cloud: Should satisfy the 5 characteristics of the Cloud & available to general public (Ex: AWS, Azure, Google Cloud)
-- Private Cloud: Should satisfy the 5 characteristics of the Cloud but only dedicated to consumer's business and runs "on premises"
-- Multi Cloud: Cloud solution that utilizes multiple public clouds of different cloud vendors in one solution. (Ex: AWS + Azure)
-- Hybrid Cloud: Cloud solution that utilize public cloud and private cloud togather. (Not public cloud + on premises resources)
+- **Public Cloud:** Should satisfy the 5 characteristics of the Cloud & available to general public (Ex: AWS, Azure, Google Cloud)
+- **Private Cloud:** Should satisfy the 5 characteristics of the Cloud but only dedicated to consumer's business and runs "on premises"
+- **Multi Cloud:** Cloud solution that utilizes multiple public clouds of different cloud vendors in one solution. (Ex: AWS + Azure)
+- **Hybrid Cloud:** Cloud solution that utilize public cloud and private cloud togather. (Not public cloud + on premises resources)
+
+### Cloud Service Modules (XAAS)
+There is *infrastructure stacks* when we build an application/service. There are 5 different types of modules of infrastructure stacks.
+
+1. On-Premises
+    - [x] Application
+    - [x] Data
+    - [x] Runtime
+    - [x] Container
+    - [x] OS
+    - [x] Virtualization
+    - [x] Servers
+    - [x] Infrastructure
+    - [x] Facility
+2. Data Center Hosted
+    - Unit of Consumption: Facility
+    - Available layers
+	    - [x] Application
+	    - [x] Data
+	    - [x] Runtime
+	    - [x] Container
+	    - [x] OS
+	    - [x] Virtualization
+	    - [x] Servers
+	    - [x] Infrastructure
+	    - [ ] ~~Facility~~
+ 3. IAAS (Infrastructure as a Service)
+    - Ex: AWS EC2
+    - Unit of Consumption: Virtual Machine
+    - Available layers
+	    - [x] Application
+	    - [x] Data
+	    - [x] Runtime
+	    - [x] Container
+	    - [x] OS
+	    - [x] Virtualization (Consumed)
+	    - [ ] ~~Servers~~
+	    - [ ] ~~Infrastructure~~
+	    - [ ] ~~Facility~~
+  4. PAAS (Platform as a Service)
+     - Ex: Running python code on Cloud
+     - Unit of Consumption: Runtime Environment
+     - Available layers
+	    - [x] Application
+	    - [x] Data
+	    - [x] Runtime (Consumed)
+	    - [ ] ~~Container~~
+	    - [ ] ~~OS~~
+	    - [ ] ~~Virtualization~~
+	    - [ ] ~~Servers~~
+	    - [ ] ~~Infrastructure~~
+	    - [ ] ~~Facility~~
+  5. SAAS (Software as a Service)
+     - Ex: Office 365, Figma, etc.
+     - Unit of Consumption: Software
+     - Available layers
+	    - [x] Application (Consumed)
+	    - [ ] ~~Data~~
+	    - [ ] ~~Runtime~~
+	    - [ ] ~~Container~~
+	    - [ ] ~~OS~~
+	    - [ ] ~~Virtualization~~
+	    - [ ] ~~Servers~~
+	    - [ ] ~~Infrastructure~~
+	    - [ ] ~~Facility~~
