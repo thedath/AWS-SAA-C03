@@ -1,6 +1,8 @@
 
 # Cloud Computing Introduction
 
+### 5 Characteristics of the Cloud
+
 1. **On-Demand Self Service:**
     - Ability to provision capabilities (storage, database, network, computing, security, etc.) for your product/service by user self as needed, "without requiring humen interation".
     - No need to visit vendor.
@@ -19,4 +21,10 @@
  4. **Rapid Elasticity:**
      - Provisioning of capabilities (database, storage, computing, networking) should get increased & decreased rapidly (elastically) based on the realtime demand of the resources.
      - To consumer ability to provision the capabilities should appear as unlimited.
-4. **Measured Service:** Usage of the consumers' resources should be able to monitred, controlled, reported & billed.
+4. **Measured Service:** Usage of the consumers' resources should be able to monitred, controlled, reported & billed. (Pay for what you consume)
+
+### Types of Clouds
+- Public Cloud: Should satisfy the 5 characteristics of the Cloud & available to general public (Ex: AWS, Azure, Google Cloud)
+- Private Cloud: Should satisfy the 5 characteristics of the Cloud but only dedicated to consumer's business and runs "on premises"
+- Multi Cloud: Cloud solution that utilizes multiple public clouds of different cloud vendors in one solution. (Ex: AWS + Azure)
+- Hybrid Cloud: Cloud solution that utilize public cloud and private cloud togather. (Not public cloud + on premises resources)
