@@ -37,3 +37,14 @@ end
 7. Switches: Advanced, intelligent L1 HUBs (stores MAC addresses of the deviced connected to its' network)
 
 ### Layer 3: Network
+1. Introduce of IP addresses (IPv4, IPv6), allowing cross communication via multiple layer 2 networks (Ex: LAN to WiFi)
+2. Introduce of ARP (Address Resolution Protocol), which enables to find the MAC addess of a given IP to communicate with its' network.
+3. Introduce the concept of route, which inform where to forward a packet to (using the destinatiob IP & Next Hop/Target IP).
+4. Introduce the route tables, which contains the multiple routes so that routers can use to determine the most appropriate route to pass a packet to.
+5. Introduce the device called 'Router' which basically brings a packet closer to its' intended destination.
+6. Enables device to device communication where these devices reside in different local networks (LAN).
+7. Cannot communicate via multiple channels between given two devices, only to source IP to destination IP.
+8. Possibility of packets being delivered in out of order.
+
+### Layer 4: Transport
+1. 
