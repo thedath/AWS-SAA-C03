@@ -47,4 +47,12 @@ end
 8. Possibility of packets being delivered in out of order.
 
 ### Layer 4: Transport
-1. 
+1. Introduce segments to IP packets, which contains source ports & destination ports
+2. Enables multiple channel communications betwwen two devices
+3. Introduce sequence numbers to segments to make IP packets being collected from destination in the inteded order
+4. 3-Way Handshake: Initiates a connection between source and destination devices in the begining, to establish a agreement on how to maintain sequence order & aknowledgement of the segments. (Uses properties of the segment in the IP packet like Flags, Sequence Number & Aknowledgement to enable this feature).
+
+### Layer 5: Session
+Use firewalls to define inbound & outbound rules to controll the incoming & outgoing traffic. There are two types of firewalls because of this
+- Stateless Firewalls: Applying rules for both inbound & outbound, regardless of the state of the connection
+- Statefull Firewalls: Applying rules only for outbounds & implecitly allowing inbound requests. Understands the state of the traffic. An extention to the Stateless firewall.
