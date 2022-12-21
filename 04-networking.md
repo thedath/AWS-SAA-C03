@@ -17,7 +17,7 @@ F  -->  G(L7: Application)
 end
 ```
 
-### Level 1: Physical
+### Layer 1: Physical
 1. Physical shared medium
 2. Only focus on **standards** for transmit to & receive from the medium
 3. Use hubs to connect multiple device to the same medium
@@ -25,7 +25,7 @@ end
 5. No uniquely identified devices
 6. No peer communication between devices
 
-### Level 2: Data Link
+### Layer 2: Data Link
 
 1. Device identification via globally unique MAC addresses, which enables device to device communtication
 2. Introduction of 'Frames' to transmit data via layer 1 medium.
@@ -35,3 +35,5 @@ end
 5. Unicast communication: 1:1 communication
 6. Broadcast communication: 1:M communication
 7. Switches: Advanced, intelligent L1 HUBs (stores MAC addresses of the deviced connected to its' network)
+
+### Layer 3: Network
