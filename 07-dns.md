@@ -6,4 +6,5 @@
 
 ### DNSSEC
 <img width="1728" alt="image" src="https://user-images.githubusercontent.com/56229135/209068932-0961698d-4a3e-4019-9947-2e1acad21d83.png">
+<img width="1728" alt="image" src="https://user-images.githubusercontent.com/56229135/209072073-a5b70c36-acc5-47c7-a356-3c69ee7707b6.png">
 
