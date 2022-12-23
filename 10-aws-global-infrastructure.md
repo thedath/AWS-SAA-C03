@@ -10,3 +10,8 @@
 - Availability Zones (AZ): 
     - Isolated infrastructure within a single AWS region.
     - Some services can be placed across AZs.
+
+
+### Service Resilience
+- Global resilient: Need a global outage to happen in order for a outage in a global AWS service (Ex: AWS IAM)
+- 
