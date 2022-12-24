@@ -13,5 +13,6 @@
 
 
 ### Service Resilience
-- Global resilient: Need a global outage to happen in order for a outage in a global AWS service (Ex: AWS IAM)
-- 
+- Global resilient: Needs all the regions in the world to fail for a global failure.
+- Region resilient: Needs all the availability zones in a region to fail for complete region to fail.
+- AZ resilient: Needs all the hardware to fail for a AZ to fail.
