@@ -17,6 +17,7 @@
         - Shouldn't be in the format of an IP address (Ex: a.b.c.d.png)
         - Has a soft limit of 100 of buckets per account
         - Has a hard limit of 1000 of buckets per account
+        - Cannot srat with `xn-`
         - Can hold unlimited data
         - Has a flat structure, everything is created in the root, no folders & sub folders (but listing a bucket could give folders & sub folders experience)
 
