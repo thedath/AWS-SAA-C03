@@ -20,6 +20,7 @@
         - Cannot srat with `xn-`
         - Can hold unlimited data
         - Has a flat structure, everything is created in the root, no folders & sub folders (but listing a bucket could give folders & sub folders experience)
+        - By default buckets doen't allow access to other than the account root user or IAM users who were given admin privilages
 
 ### S3 Patterns & Anti Patterns
 
