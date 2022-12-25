@@ -17,4 +17,4 @@ See [Introduction](./00-introduction.md)
  11. [AWS Vertual Private Network (VPC)](./11-aws-vpc.md)
  12. [AWS Elastic Compute Cloud (EC2) - Part 1](./12-ec2-part1.md)
  13. [AWS Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
- 14. 
+ 14. [AWS Shared Responsibility Model](./14-aws-shared-responsibility-model.md)
