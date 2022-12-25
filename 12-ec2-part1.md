@@ -1,4 +1,4 @@
-# Elastic Compute Cloud (EC2)
+# Elastic Compute Cloud (EC2) - Part 1
 
 - Is a vertual machine runs on AWS insfrastructure
 - Is a IAAS from AWS
