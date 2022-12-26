@@ -38,9 +38,9 @@
 - Can take a AMI of an running instance
 - Properties of an AMI
     - Permissions
-        - Public: Everyone allowed to create instances form this AMI
-        - Owner: Only owner of this AMI's account can create instances form this AMI (Implicitly allowed)
-        - Explicit: Only specified AWS accounts allowed to create instances form this AMI
+        - Public: Everyone allowed to create instances from this AMI
+        - Owner: Only owner of this AMI's account can create instances from this AMI (Implicitly allowed)
+        - Explicit: Only specified AWS accounts allowed to create instances from this AMI
     - Root volume: Volume for boot loader to exist
     - Block device mapping: Mapping of other volumes included
 
