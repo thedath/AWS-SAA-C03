@@ -25,6 +25,17 @@
 - Maximum 5,000 users per AWS account
 - 1 IAM user can be assigned to 10 IAM groups at maximum
 
+### IAM Groups
+- Cannot login to groups
+- No credentials for groups
+- In AWS there's no all users group out of the box
+- Cannot have groups within groups
+- 300 groups per account (can be increased)
+- Resource policies cannot refer a IAM Group as a pricipal to grant access, but can refer IAM Users
+
+### IAM Roles
+- 
+
 ### AWS ARNs
 - Amazone Resource Name
 - Purpose is to uniquely identify AWS resources within an AWS account
