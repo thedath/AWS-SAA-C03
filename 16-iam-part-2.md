@@ -22,9 +22,11 @@
 
 ### IAM Users
 - Principals: An entity (people, group of people, computers, service, etc.) trying to access a AWS resource
+- Maximum 5,000 users per AWS account
+- 1 IAM user can be assigned to 10 IAM groups at maximum
 
 ### AWS ARNs
 - Amazone Resource Name
 - Purpose is to uniquely identify AWS resources within an AWS account
 - Can use wild card to reference multiple AWS resources
-- 
+- `arn:aws:[service]:::[resource name]` !== `arn:aws:[service]:*:*:[resource name]`
