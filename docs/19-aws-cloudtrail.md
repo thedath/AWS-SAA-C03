@@ -1,9 +1,9 @@
-
 # AWS Cloud Trail
 
 - Is a regional service
 - Trail can be set to one region or all region
 - There are some AWS resources logs events globally (globally === North Virginia Region) Ex: IAM, CFD, STS
+- It is not realtime
 - Specifically logs API calls or account activities
 - CloudTrail Event: Is an activity of AWS account, taken by an user, role or another AWS service
 - Stores CloudTrails events for past 90 days by default
