@@ -49,6 +49,13 @@
     - AWS Lambda
     - Web ID federation use cases 
     - AWS Organization
+- Service-Linked Roles
+    - Pre defined Roles that are already attached to a AWS service
+    - Might get created during the creation of the service
+    - Might request the user to create during the creation process of that service (Ex: Service setup wizard)
+    - Can be created withing IAM
+    - Main differenece compared to normal Roles is, in order to delete a Service-Linked Role that we should ensure that it is not being used anymore, anywhere
+    - Roles passing???
 
 ### AWS ARNs
 - Amazone Resource Name
