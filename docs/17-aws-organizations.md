@@ -12,5 +12,9 @@
 
 ### Service Control Policies (SCPs)
 Controls the things each account in the organization can perform
+-Don't grant any permissions, just bounderies, control what is allowed & not allowed
 - SCPs are assigned to management account, member accounts, organizational root & other organizational units (OUs)
 - Assigning SCPs directly to the management account it self or to the organization root has no effect on the managment account what so ever
+- Allow List vs Deny List
+
+<img width="1728" alt="image" src="https://user-images.githubusercontent.com/56229135/209659023-05a97477-a92b-48c9-9eb8-5c8e40465c30.png">
