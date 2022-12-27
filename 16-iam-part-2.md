@@ -45,6 +45,10 @@
         - These security credentials are created by the AWS service called STS (Security Token Service)
     - Permissions policies
         - Used to grant the access to AWS resources to identities got temporariliy authenticated based on the trust policies
+- Can used in
+    - AWS Lambda
+    - Web ID federation use cases 
+    - AWS Organization
 
 ### AWS ARNs
 - Amazone Resource Name
