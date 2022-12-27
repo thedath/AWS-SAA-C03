@@ -5,7 +5,7 @@ See [Introduction](./00-introduction.md)
 
 ## Content
  1. [Course fundamentals & AWS accounts](./01-course-fundamentals-and-aws-accounts.md)
- 2. [AIM](./02-iam.md)
+ 2. [IAM - Part 1](./02-iam.md)
  3. [Cloud Computing Introduction](./03-cloud-computing-introduction.md)
  4. [Networking](./04-networking.md)
  5. [Network Address Translation (NAT)](./05-nat.md)
@@ -19,3 +19,4 @@ See [Introduction](./00-introduction.md)
  13. [AWS Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
  14. [AWS Shared Responsibility Model](./14-aws-shared-responsibility-model.md)
  15. [AWS High-Availability vs Fault-Tolerance vs Disaster Recovery](./15-aws-ha-ft-dr.md)
+ 16. [IAM - Part 2](./16-iam-part-2.md)
