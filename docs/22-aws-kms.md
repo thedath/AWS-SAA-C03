@@ -19,5 +19,5 @@
     - Policy
     - Description
     - State
-- 4KB of data can be encrypted & decrypted
-- Data Encryption Keys (DEK): 
+- Data Encryption Keys (DEK)
+    - 4KB of data can be encrypted & decrypted
