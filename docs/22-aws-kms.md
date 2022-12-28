@@ -25,4 +25,3 @@
 - Data Encryption Keys (DEK)
     - 4KB of data can be encrypted & decrypted
 - Key Policy: Needs to create a policy for a Key to be accessed by an identity, event the identity resides within the same account of the Key
-- 
