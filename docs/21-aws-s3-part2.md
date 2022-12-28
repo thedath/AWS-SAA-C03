@@ -15,6 +15,7 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
         - Can also ALLOW/DENY anonymous principals
         - Use 'Principal' property in the policy document to define who can access this resource
         - `"Principal": "*"` - Every identity in this account, any identity from any external account, any anonymous identities
+- There's limit of 5GB for a single PUT upload
 - "Block Public Access": Overrides what resource policy says, blocks the access to the public anonymous identities
 - Static Site Hosting
     - `index` & `error` page is mandatory
