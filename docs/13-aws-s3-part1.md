@@ -30,4 +30,4 @@
 - Great for offloading
 - Most of the time S3 is suitable to accept input data for an AWS resource and as well as output data of an AWS resource
 
-[Simple Storage Service (S3) - Part 1](./21-aws-s3-part2.md)
+[Simple Storage Service (S3) - Part 2](./21-aws-s3-part2.md)
