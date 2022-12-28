@@ -17,5 +17,5 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
         - `"Principal": "*"` - Every identity in this account, any identity from any external account, any anonymous identities
 - "Block Public Access": Overrides what resource policy says, blocks the access to the public anonymous identities
 - Static Site Hosting
+    - `index` & `error` page is mandatory
     - To setup a custom domain, custom domain name & bucket name should match
-    - 
