@@ -1,3 +1,4 @@
+
 # Simple Storage Service (S3) - Part 2
 
 Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
@@ -37,5 +38,12 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
     - Delete Marker: Is a special marker in object version history added by AWS S3 to refer that object as a deleted object
     - Delete Marker can be deleted and doing so will bring back the last availble version of the object
     - All versions are billed
-- MFA Delete
-    - MFA is required to change bucket state, delete a version, it required a MFA
+- MFA Delete: MFA is required to change bucket state, delete a version, it required a MFA
+- Encryption
+    - Buckets aren't encrypted, objects in the buckets are encrypted
+    - 2 supporting methods (refering to encryption at rest, not in transit)
+        - Client side encryption
+        - Server side encryption
+            - SSE - C (Using a customer provided key) - Not suitable if compute is taking toll
+            - SSE - S3 (Using AWS S3 Managed key) - Not suitable if role seperation is handled
+            - SSE - KMS (Suing a key managed by KMS) - Ideal when role seperation needed. Uses AES256 algorithm.
