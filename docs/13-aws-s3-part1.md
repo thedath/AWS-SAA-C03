@@ -29,3 +29,5 @@
 - You can't mount S3 bucket as a mount point or a volume
 - Great for offloading
 - Most of the time S3 is suitable to accept input data for an AWS resource and as well as output data of an AWS resource
+
+[Simple Storage Service (S3) - Part 1](./21-aws-s3-part2.md)
