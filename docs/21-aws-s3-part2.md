@@ -16,6 +16,16 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
         - Use 'Principal' property in the policy document to define who can access this resource
         - `"Principal": "*"` - Every identity in this account, any identity from any external account, any anonymous identities
 - There's limit of 5GB for a single PUT upload
+- Supports Multipart upload
+    - Minimum file size is 100MB
+    - Maximum 10,000 multiparts
+    - Size of one multipart must be between 5MB ~ 5GB
+    - The last multipart can be lessthan 5MB
+- Accelerated Transfer: Uses AWS Edge locations
+    - 2 restrictions for enabling
+        - Bucket name cannot contain periods (`.`) 
+        - Bucket name should be DNS compatible
+    - Creates a different type of S3 URLs
 - "Block Public Access": Overrides what resource policy says, blocks the access to the public anonymous identities
 - Static Site Hosting
     - `index` & `error` page is mandatory
