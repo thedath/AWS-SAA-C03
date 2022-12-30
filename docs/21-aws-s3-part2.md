@@ -175,3 +175,11 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
         - Deep Archive
     - Tiering is automatically handled
 
+## S3 Lifestyle Configuration
+- Set of rules
+- "Do this, when this is true"
+- Can apply versioned S3 buckets
+- Ex:
+    - Delete an object after ceratin time period
+    - Archive an object after ceratain time period
+    - 
