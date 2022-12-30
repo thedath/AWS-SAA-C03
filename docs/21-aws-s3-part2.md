@@ -1,4 +1,5 @@
 
+
 # Simple Storage Service (S3) - Part 2
 
 Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
@@ -47,3 +48,48 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
             - SSE - C (Using a customer provided key) - Not suitable if compute is taking toll
             - SSE - S3 (Using AWS S3 Managed key) - Not suitable if role seperation is handled
             - SSE - KMS (Suing a key managed by KMS) - Ideal when role seperation needed. Uses AES256 algorithm.
+- Object Storage Classes
+   - S3 Standard Class
+       - Stored in at least 3 AZs
+       - Object durability is '11 nines': 99.999,999,999% per year (1 object loss per 10, 000, 000 year)
+       - Redundacy check using MD5 checksum
+       - Cyclic Redundancy Check (CRC): To check & fix any data curruption
+       - S3 responds with HTTP1.1 200 status, if a accessing object stored durably
+       - Fees
+           - Storing: $x per month, per GB
+           - Transfering IN: Free
+           - Transfering OUT: $x per GB
+           - Requesting: $x per 1,000 requests
+           - Retriewing: Free
+           - Minimum duration charge: No
+           - Minimum size charge: No
+       - No minimum duration
+       - No minimum size
+       - Has a "milliseconds first byte latency"
+       - Can make publicly available
+       - Once configured, cannot be replaced by a different class
+   - S3 Standard - Infrequent Access (IA) Class
+        - Stored in at least 3 AZs
+        - Object durability is '11 nines': 99.999,999,999% per year (1 object loss per 10, 000, 000 year)
+        - Redundacy check using MD5 checksum
+        - Cyclic Redundancy Check (CRC): To check & fix any data curruption
+        - S3 responds with HTTP1.1 200 status, if a accessing object stored durably
+        - Fees
+            - Storing: Half of S3 Standard
+            - Transfering IN: Free
+            - Transfering OUT: Half of S3 Standard
+            - Requesting: Half of S3 Standard
+            - Retriewing: $x per GB
+            - Minimum duration charge: $x for 30 days
+            - Minimum size charge: $x for 128KB
+        - No minimum duration
+        - No minimum size
+        - Has a "milliseconds first byte latency"
+        - Can make publicly available
+        - Ideal for:
+            - Longed lived, important data
+            - Infrequently accessed data
+            - Don't use it for small files
+            - Don't use it for temporary data
+    - S3 One Zone Infrequent Access (IA) Class
+        - s 
