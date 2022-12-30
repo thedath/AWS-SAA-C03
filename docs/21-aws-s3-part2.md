@@ -49,12 +49,16 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
             - SSE - S3 (Using AWS S3 Managed key) - Not suitable if role seperation is handled
             - SSE - KMS (Suing a key managed by KMS) - Ideal when role seperation needed. Uses AES256 algorithm.
 - Object Storage Classes
-   - S3 Standard Class
-       - Stored in at least 3 AZs
-       - Object durability is '11 nines': 99.999,999,999% per year (1 object loss per 10, 000, 000 year)
+   - Common features
        - Redundacy check using MD5 checksum
        - Cyclic Redundancy Check (CRC): To check & fix any data curruption
        - S3 responds with HTTP1.1 200 status, if a accessing object stored durably
+       - Once configured, cannot be replaced by a different class
+       - Stored in at least 3 AZs
+       - Object durability is '11 nines': 99.999,999,999% per year (1 object loss per 10, 000, 000 year)
+       - Has a "milliseconds first byte latency"
+       - Can make publicly available
+   - S3 Standard Class
        - Fees
            - Storing: $x per month, per GB
            - Transfering IN: Free
@@ -63,33 +67,91 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
            - Retriewing: Free
            - Minimum duration charge: No
            - Minimum size charge: No
-       - No minimum duration
-       - No minimum size
-       - Has a "milliseconds first byte latency"
-       - Can make publicly available
-       - Once configured, cannot be replaced by a different class
    - S3 Standard - Infrequent Access (IA) Class
-        - Stored in at least 3 AZs
-        - Object durability is '11 nines': 99.999,999,999% per year (1 object loss per 10, 000, 000 year)
-        - Redundacy check using MD5 checksum
-        - Cyclic Redundancy Check (CRC): To check & fix any data curruption
-        - S3 responds with HTTP1.1 200 status, if a accessing object stored durably
         - Fees
-            - Storing: Half of S3 Standard
+            - Storing: **Half of S3 Standard**
             - Transfering IN: Free
-            - Transfering OUT: Half of S3 Standard
-            - Requesting: Half of S3 Standard
-            - Retriewing: $x per GB
-            - Minimum duration charge: $x for 30 days
-            - Minimum size charge: $x for 128KB
-        - No minimum duration
-        - No minimum size
-        - Has a "milliseconds first byte latency"
-        - Can make publicly available
+            - Transfering OUT: **Half of S3 Standard**
+            - Requesting: **Half of S3 Standard**
+            - Retriewing: **$x per GB**
+            - Minimum duration charge: **$x for 30 days**
+            - Minimum size charge: **$x for 128KB**
         - Ideal for:
             - Longed lived, important data
             - Infrequently accessed data
             - Don't use it for small files
             - Don't use it for temporary data
     - S3 One Zone Infrequent Access (IA) Class
-        - s 
+        - **Stored in a one availability zone (AZ) within the region (No multi AZ resiliant mode)**
+        - **Object durability is '11 nines': 99.999,999,999% per year, assuing AZ does not failes (1 object loss per 10, 000, 000 year)**
+        - Fees
+            - Storing: **Less than S3 Standard-IA**
+            - Transfering IN: Free
+            - Transfering OUT: **Less than S3 Standard-IA**
+            - Requesting: **Less than S3 Standard-IA**
+            - Retriewing: **Less than S3 Standard-IA**
+            - Minimum duration charge: **Less than S3 Standard-IA** (30 days)
+            - Minimum size charge: **Less than S3 Standard-IA** (128KB)
+        - Ideal for:
+            - Longed lived, non crytical data
+            - Infrequently accessed data
+		    - Storing non-critical data
+		    - Data that are easily replaceable
+		    - Cross regional, replicated data
+		    - Intermediate, temporary data
+    - S3 Glacier - Instant Retrieval
+        - Fees
+            - Storing: **Less than S3 Standard-IA Standard**
+            - Transfering IN: Free
+            - Transfering OUT: **Less than S3 Standard-IA Standard**
+            - Requesting: **Less than S3 Standard-IA Standard**
+            - Retriewing: **Less than S3 Standard-IA Standard**
+            - Minimum duration charge: **$x for 90 days**
+            - Minimum size charge: **$x for 128KB**
+        - Ideal for:
+            - If you want to access data instantly
+            - But not frequently thatn 3 months (quarterly)
+    - S3 Glacier - Flexible Retrieval
+        - Special Notes:
+            - Data aren't immideately available
+            - Data not publicly availble out of the box (Meta data can)
+            - By default data are Cold
+            - Data will be warmed & delivered on request
+            - S3 bucket will store pointers to the actual object
+            - 3 retrieval types
+                - Experdite: 1- 15 minutes
+                - Standard: 3 - 5 hours
+                - Bulk: 5 - 12 hours
+            - Firs byte to receive latency: minutes to hours 
+        - Fees
+            - Storing: **Less than S3 Standard-IA Standard**
+            - Transfering IN: Free
+            - Transfering OUT: **Less than S3 Standard-IA Standard**
+            - Requesting: **Less than S3 Standard-IA Standard**
+            - Retriewing: **Less than S3 Standard-IA Standard**
+            - Minimum duration charge: **$x for 90 days**
+            - Minimum size charge: **$x for 40KB**
+        - Ideal for:
+            - Best for archival data
+            - Data no need to instantly delivered
+    - S3 Glacier - Deep Archive
+        - Notes:
+            - Same as S3 Glacier - Flexible Retrieval but
+            - Data in frozen state
+            - Take more time to warm data
+            - Cheaper than Glacier Flexible
+            - 2 retrieval types
+                - Standard: 12 hours
+                - Bulk: 24 hours
+            - Firs byte to receive latency: hours to days 
+        - Fees
+            - Storing: **Less than S3 Glacier - Flexible Retrieval**
+            - Transfering IN: Free
+            - Transfering OUT: **Less than S3 Glacier - Flexible Retrieval**
+            - Requesting: **Less than S3 Glacier - Flexible Retrieval**
+            - Retriewing: **Less than S3 Glacier - Flexible Retrieval**
+            - Minimum duration charge: **$x for 180 days**
+            - Minimum size charge: **$x for 40KB**
+        - Ideal for:
+            - Best for archival data
+            - Data no need to instantly delivered
