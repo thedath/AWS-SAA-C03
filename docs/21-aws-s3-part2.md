@@ -228,3 +228,36 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
 
 ## S3 Select & S3 Glacier Select
 Filtering object selection from the S3 side itself, without getting the whole object to the application's side. Types of object can be filtered: CSV, JSON, Parquet, BZIP2 of CSV & JSON
+
+## S3 Event Notification
+Receive nofications on channels like SQS, SNS & Lambda when events occure on a S3 bucket. 
+
+Events
+- Put, Post, Copy, CompleteMultiPartUpload
+- Delete, DeleteMarkerCreated
+- Restore Initiated & Completed: When object beinged retrieved from Archive storages such as Glacier
+- Replication: Within Threashold, Beyond Threshold, Failed, Completed
+
+## S3 Logs
+Logs (Apache like) are written into a target bucket. 
+
+## S3 Object Lock
+- Write-Once Read-Many (WORM): No deletes, No overwrite
+- Can only be enabled for new buckets
+- To enable for existing buckets, need to contact AWS support
+- Requires versioning to be enabled, so eventually object version are being locked
+- Can be define for each object version or can be configured as a bucket defaults
+- Retention of the locked objects (2 types). An object version an have both of them, one of them or none of them.
+    - Retention
+        - Specified retention period in days and/or years
+        - Compliance mode. For the given retention time period (even for the root user), 
+            - Object versions cannot be deleted
+            - Object versions cannot be overwritten
+            - Retention period cannot be adjusted
+            - Retention mode cannot be changed
+        - Governance mode. Same like Retention mode, but additionally can grant special permissions so that retention settings can be adjusted
+            - Permission: s3:BypassGovernanceRetention
+            - HTTP Header: x-amz-bypass-governance-retention: true
+            - Use cases: Prevent accidental deletion, as a trial for compliance mode
+    - Legal hold
+        - 
