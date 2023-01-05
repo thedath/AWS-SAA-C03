@@ -194,3 +194,23 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
     - Source & destination buckets are tin the same AWS account
     - Role is being created in the source bucket to grant access to read data on the source bucket for identity going to assume this Role
     - No need of a destination bucket policy since both buckets are in the same AWS account
+- Replication config:
+    - All objects or subset of objects, can be specified by using filters
+    - Destination storage class: Is the same as the source's storage class by default
+    - Ownership: Ownership of the destination bucket
+        - Source & Destination buckets created in the same account: Owned by the same account
+        - Source & Destination buckets created in two different accounts: By default bucket will be owned by the source account, will not be able to access by destination account. Can be override.
+    - Replication Time Control (RTC): By default its a 15 minutes window. Enable when source & destination buckets need to be in sync as closely as possible
+    - IMPORTANT
+        - Configured between two buckets
+        - Only the objects being added/changed after the configuration, are considered for the replication
+        - Versioning must be available in the both buckets
+        - One way replication: Destination changes won't replicated in the source
+        - Replication with Encrption
+            - Files encrypted with SSE-S3 are replicated
+            - Files encrypted with SSE-KMS are replicated, with additional configurations
+            - Files encrypted with SSE-C cannot be replicated
+        - Can replicate objects only owned by the source account
+        - System events aren't replicated, only user events
+        - Buckets of Glacier Flexible Retrieval & Glacier Deep Archive storage classes cannot be replicated
+        - Delete markers are not replicated
