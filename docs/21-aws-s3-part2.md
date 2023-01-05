@@ -222,4 +222,7 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
     - CRR
         - Globally resilience storage solutions
         - Latency reduction
--  
+-  S3 Pre-Signed URL: Generated URLs with neccessary credentials embedded granting access to an private object in a S3 bucket for a limited time period
+    - It is possible to generate a Pre-Signed URL for an object in a bucket that you don't have the access (you only can generate, cannot access)
+    - When accessing a pre-signed URL, it matches the permissions of the identity which created that URL, right now
+    -    
