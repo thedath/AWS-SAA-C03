@@ -214,3 +214,12 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
         - System events aren't replicated, only user events
         - Buckets of Glacier Flexible Retrieval & Glacier Deep Archive storage classes cannot be replicated
         - Delete markers are not replicated
+- Why use replication
+    - SRR
+        - Log aggregation
+        - Sync data from PROD to TEST account, or other way around
+        - Resilience with strict sovereignty
+    - CRR
+        - Globally resilience storage solutions
+        - Latency reduction
+-  
