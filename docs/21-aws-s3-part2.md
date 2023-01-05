@@ -213,7 +213,7 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
         - Can replicate objects only owned by the source account
         - System events aren't replicated, only user events
         - Buckets of Glacier Flexible Retrieval & Glacier Deep Archive storage classes cannot be replicated
-        - Delete markers are not replicated
+        - Delete markers are not replicated by default
 - Why use replication
     - SRR
         - Log aggregation
