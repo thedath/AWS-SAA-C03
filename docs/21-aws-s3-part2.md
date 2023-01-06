@@ -44,7 +44,7 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
         - Client side encryption
         - Server side encryption
             - SSE - C (Using a customer provided key) - Not suitable if compute is taking toll
-            - SSE - S3 (Using AWS S3 Managed key) - Not suitable if role seperation is handled
+            - SSE - S3 (Using AWS S3 Managed key) - Most of the time this will be the go-to. But, not suitable if needs to handle key rotation, if needs to define a custom key, if need role seperation (Ex: Allowing certain group of people to create buckets, but they cannpt view the encrypted files)
             - SSE - KMS (Suing a key managed by KMS) - Ideal when role seperation needed. Uses AES256 algorithm.
 
 ## Object Storage Classes
