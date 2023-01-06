@@ -1,5 +1,3 @@
-
-
 # Simple Storage Service (S3) - Part 2
 
 Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
@@ -260,4 +258,6 @@ Logs (Apache like) are written into a target bucket.
             - HTTP Header: x-amz-bypass-governance-retention: true
             - Use cases: Prevent accidental deletion, as a trial for compliance mode
     - Legal hold
-        - 
+        - Does not have a retention period at all
+        - Simply set ON or OFF for legal hold in object version level. No delete or changes allowed when ON
+        - Permission: s3PutObjectLegalHold
