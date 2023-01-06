@@ -210,17 +210,19 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
         - System events aren't replicated, only user events
         - Buckets of Glacier Flexible Retrieval & Glacier Deep Archive storage classes cannot be replicated
         - Delete markers are not replicated by default
-- Why use replication
-    - SRR
-        - Log aggregation
-        - Sync data from PROD to TEST account, or other way around
-        - Resilience with strict sovereignty
-    - CRR
-        - Globally resilience storage solutions
-        - Latency reduction
--  S3 Pre-Signed URL: Generated URLs with neccessary credentials embedded granting access to an private object in a S3 bucket for a limited time period
-    - It is possible to generate a Pre-Signed URL for an object in a bucket that you don't have the access (you only can generate, cannot access)
-    - When accessing a pre-signed URL, it matches the permissions of the identity which created that URL, right now
+    - Why use replication
+	    - SRR
+		- Log aggregation
+		- Sync data from PROD to TEST account, or other way around
+		- Resilience with strict sovereignty
+	    - CRR
+		- Globally resilience storage solutions
+		- Latency reduction
+
+## S3 Pre-Signed URL
+Generated URLs with neccessary credentials embedded granting access to an private object in a S3 bucket for a limited time period
+- It is possible to generate a Pre-Signed URL for an object in a bucket that you don't have the access (you only can generate, cannot access)
+- When accessing a pre-signed URL, it matches the permissions of the identity which created that URL, right now
 
 ## S3 Select & S3 Glacier Select
 Filtering object selection from the S3 side itself, without getting the whole object to the application's side. Types of object can be filtered: CSV, JSON, Parquet, BZIP2 of CSV & JSON
