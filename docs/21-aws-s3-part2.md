@@ -183,13 +183,11 @@ Continuing from [Simple Storage Service (S3) - Part 1](./13-aws-s3-part1.md)
     - 
 
 ## S3 Replication
-
+- Source & destination buckets can be in two seperate accounts
 - Cross Region Replication (CRR)
-    - Source & destination buckets are in different AWS Accounts
     - Role is being created in the source bucket to grant access to read data on the source bucket for identity going to assume this Role
     - Destination bucket policy is being created to grant access to the role of the source bucket to write replicating data into this bucket
 - Same Region Replication (SRR): Source & destination buckets are in the same AWS Account
-    - Source & destination buckets are tin the same AWS account
     - Role is being created in the source bucket to grant access to read data on the source bucket for identity going to assume this Role
     - No need of a destination bucket policy since both buckets are in the same AWS account
 - Replication config:
